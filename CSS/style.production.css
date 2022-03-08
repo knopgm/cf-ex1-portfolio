@@ -16,6 +16,7 @@
   --sun-color-one: #edc655;
   --sun-color-two: #fcffad;
   --sun-color-three: #f76414;
+  --button-bg-color: #4dad9e;
 
   /*Fonts list: */
   --font-weight-normal: 400;
@@ -145,7 +146,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color: var(--primary-color);
+  background-color: var(--button-bg-color);
   color: var(--white);
   text-decoration: none;
   padding: 10px;
