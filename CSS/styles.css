@@ -159,6 +159,9 @@ button:focus,
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .profile__portrait {
@@ -166,6 +169,18 @@ button:focus,
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
+}
+
+@media all and (max-width: 500px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .profile__portrait {
+    margin-right: 0;
+  }
 }
 
 .page-footer {

@@ -180,6 +180,12 @@ button:focus,
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .profile__portrait {
@@ -187,6 +193,23 @@ button:focus,
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
+}
+
+@media all and (max-width: 500px) {
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .profile__portrait {
+    margin-right: 0;
+  }
 }
 
 .page-footer {
