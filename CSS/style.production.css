@@ -173,6 +173,10 @@ button:focus,
   color: var(--dark-grey);
 }
 
+.button_container {
+  padding-bottom: 20px;
+}
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
