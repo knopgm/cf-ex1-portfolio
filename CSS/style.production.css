@@ -138,6 +138,19 @@ a:active {
   margin: 0px 24px 16px 0px;
 }
 
+#contact-message {
+  border-radius: 5px;
+  font-size: 14px;
+  border-color: var(--button-bg-color);
+}
+
+input {
+  border-radius: 5px;
+  font-size: 14px;
+  min-height: 30px;
+  border-color: var(--button-bg-color);
+}
+
 .button,
 button {
   /* overwrites browser defaults and resets the border */
@@ -150,7 +163,6 @@ button {
   color: var(--white);
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s opacity;
@@ -175,6 +187,12 @@ button:focus,
 
 .button_container {
   padding-bottom: 20px;
+}
+
+.submit_button {
+  margin-top: 10px;
+  background-color: var(--button-bg-color);
+  color: var(--white);
 }
 
 .profile {
