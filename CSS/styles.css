@@ -27,6 +27,21 @@
   box-sizing: border-box;
 }
 
+textarea {
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+}
+
+input {
+  all: unset;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: var(--font-weight-normal);
@@ -39,6 +54,7 @@ body {
 h1 {
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bigger);
+  margin: 0;
 }
 
 h2 {
@@ -107,71 +123,68 @@ a:active {
 }
 
 .about {
-  display: flex;
-  flex-direction: column;
-  max-width: 700px;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
-.hobbys-list {
-  list-style: none;
-  margin: 0px 24px 16px 0px;
-}
-
-#contact-message {
+.title-underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 10%;
+  background: var(--secondary-color);
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 5px;
-  font-size: 14px;
-  border-color: var(--button-bg-color);
 }
 
-input {
+.about_main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
   border-radius: 5px;
-  font-size: 14px;
-  min-height: 30px;
-  border-color: var(--button-bg-color);
 }
 
-.button,
-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the button */
-  background-color: var(--button-bg-color);
-  color: var(--white);
-  text-decoration: none;
-  padding: 10px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: 0.2s opacity;
+@media all and (min-width: 600px) {
+  .about_main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
 }
 
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
+.about-wrapper {
+  text-align: center;
+  align-self: center;
 }
 
-.button__secondary {
-  background-color: var(--secondary-color);
-  color: var(--dark-grey);
+.presentation {
+  text-align: justify;
+  margin: 10px;
 }
 
-.button_container {
-  padding-bottom: 20px;
+.svg-wrapper {
+  width: 90%;
+  align-self: center;
+  justify-self: center;
 }
 
-.submit_button {
-  margin-top: 10px;
-  background-color: var(--button-bg-color);
-  color: var(--white);
+.code_icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.code_icons img {
+  width: 16%;
+}
+
+.title-underline {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .profile {
@@ -210,6 +223,15 @@ button:focus,
 
 .work-container {
   margin: 0 20px;
+}
+
+.emphasise-container-wrapper {
+  padding: 1rem;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  background-color: blanchedalmond;
+  border-radius: 0.5rem;
+  margin-top: 16px;
 }
 
 .grid {
@@ -326,18 +348,132 @@ button:focus,
   flex-direction: column;
   align-items: center;
 }
-.contact_infos {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+
+.contact-title-link {
+  text-decoration: none;
+  color: black;
+}
+
+.contact_infos-wrapper {
+  display: grid;
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
+}
+
+@media all and (min-width: 500px) {
+  .contact_infos-wrapper {
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 #contact-form {
-  padding-top: 20px;
+  display: grid;
+  gap: 10px;
+  width: fit-content;
+}
+
+@media all and (min-width: 500px) {
+  #contact-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+}
+
+.form_contact-wrapper {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  gap: 10px;
+  max-width: 420px;
+  margin-top: 50px;
+}
+
+@media all and (min-width: 500px) {
+  .form_contact-wrapper {
+    margin: 50px auto;
+  }
+}
+
+.input-form {
+  border-radius: 8px;
+  line-height: 16px;
+  background-color: transparent;
+  border: 2px solid var(--button-bg-color);
+  transition: all 0.3s;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.input-form:focus {
+  border: 2px solid var(--primary-color);
+}
+
+textarea {
+  height: 110px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+#contact-message {
+  border: 2px solid var(--button-bg-color);
+  border-radius: 5px;
+  font-size: 14px;
+  border-color: var(--button-bg-color);
+}
+
+.button,
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: var(--button-bg-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
+}
+
+.button_container {
+  padding-bottom: 20px;
+}
+
+[type="submit"] {
+  text-align: center;
+  width: 89%;
+  background: var(--button-bg-color);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  transition: all 0.3s;
+  margin-top: 3px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: var(--primary-color);
 }

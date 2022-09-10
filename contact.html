@@ -58,37 +58,63 @@
       </nav>
     </header>
     <main class="contact_container">
-      <a href="mailto:knop.gm@gmail.com">Contact me</a>
-      <div class="contact_infos">
-        Gabriela Knop Marques<br />
-        Sophie-Charlotten-Str. <br />
-        14059 Berlin<br />
-        Deutschland<br />
-        <br />
-        <div>
-          Tel: <a href="tel:+491234567">+49 1234567</a><br />
-          Skype: <a href="skype:something"> My Skype</a><br />
-          <a href="mailto:knop.gm@gmail.com"
-            >knop (dot) gm (at) gmail (dot) com</a
+      <div class="title-underline">
+        <h1 class="contact-title">
+          <a href="mailto:knop.gm@gmail.com" class="contact-title-link"
+            >Contact me</a
           >
+        </h1>
+      </div>
+      <div class="emphasise-container-wrapper">
+        <div class="contact_infos-wrapper">
+          <div class="address">
+            Gabriela Knop Marques<br />
+            Sophie-Charlotten-Str. <br />
+            14059 Berlin<br />
+            <br />
+          </div>
+          <div class="contacts">
+            Tel: <a href="tel:+491234567">+49 1234567</a><br />
+            Skype: <a href="skype:something"> My Skype</a><br />
+            <a href="mailto:knop.gm@gmail.com"
+              >knop (dot) gm (at) gmail (dot) com</a
+            >
+          </div>
         </div>
       </div>
       <form method="post" id="contact-form">
-        <label class="standard-label" for="contact-email">Email: </label>
-        <input type="email" id="contact-email" required />
-
-        <label class="standard-label" for="contact-telephone"
-          >Telephone:
-        </label>
-        <input
-          type="tel"
-          id="contact-telephone"
-          pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-        />
-
-        <label class="standard-label" for="contact-message">Message: </label>
-        <textarea required maxlength="240" id="contact-message"></textarea>
-        <input type="submit" value="Send message" class="submit_button" />
+        <div class="form_contact-wrapper">
+          <input
+            type="name"
+            id="contact-name"
+            class="input-form"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="contact-email"
+            class="input-form"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="tel"
+            id="contact-telephone"
+            class="input-form"
+            placeholder="Telephone"
+            pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+          />
+        </div>
+        <div class="form_contact-wrapper">
+          <textarea
+            required
+            maxlength="240"
+            id="contact-message"
+            placeholder="Message"
+          ></textarea>
+          <input type="submit" value="SUBMIT" class="submit_button" />
+        </div>
       </form>
     </main>
 
