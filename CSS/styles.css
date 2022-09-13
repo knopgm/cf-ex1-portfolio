@@ -2,6 +2,7 @@
   /*Colours list: */
   --primary-color: #357b70;
   --white: #fff;
+  --another-white: floralwhite;
   --visited-link-color: #05676e;
   --active-link-color: #489c79;
   --secondary-color: #e0b354;
@@ -87,6 +88,142 @@ a:active {
   color: var(--active-link-color);
 }
 
+.body-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Hamburger menu*/
+@media all and (max-width: 500px) {
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+}
+/*End of hamburger menu*/
+
 .page-header {
   /* background-color: lightgray; */
   display: flex;
@@ -128,15 +265,8 @@ a:active {
   text-align: center;
 }
 
-.title-underline::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 10%;
-  background: var(--secondary-color);
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
+.pagehome_infos {
+  font-size: 18px;
 }
 
 .about_main-wrapper {
@@ -175,6 +305,8 @@ a:active {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 512px;
+  margin: 0 auto;
 }
 
 .code_icons img {
@@ -182,35 +314,70 @@ a:active {
 }
 
 .title-underline {
-  max-width: 90%;
-  margin: 0 auto;
-  text-align: center;
+  display: inline-block;
+  position: relative;
 }
+
+.title-underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 90%;
+  background: var(--secondary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+/*profile Avatar*/
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 24px;
+  align-items: center;
 }
 
-.profile__portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
+.profile__cropper {
+  background-color: antiquewhite;
+  overflow: hidden;
   border-radius: 50%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.profile__cropper img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 @media all and (max-width: 500px) {
   .profile {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    margin: 20px 0 10px 10px;
+    width: 100%;
+    text-align: center;
   }
 
-  .profile__portrait {
+  .profile__cropper {
     margin-right: 0;
+    margin: 0 auto;
+    max-width: 50%;
+    padding: 0;
+  }
+
+  .profile__cropper img {
+    position: unset;
+    width: 100%;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -225,28 +392,37 @@ a:active {
   margin: 0 20px;
 }
 
-.emphasise-container-wrapper {
-  padding: 1rem;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
-    0 5px 15px 0 rgba(0, 0, 0, 0.08);
-  background-color: blanchedalmond;
-  border-radius: 0.5rem;
-  margin-top: 16px;
-}
-
 .grid {
+  padding-top: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
-.grid__item {
-  background-color: lightgray;
-  padding: 10px 20px;
+.grid-item {
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid-item__title {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.grid-item__description {
+  margin: 8px 0;
+  text-align: justify;
+}
+
+.grid-item__link {
+  text-align: right;
 }
 
 /* start grid fallback */
-.grid__item {
+.grid-item {
   display: inline-block;
   width: 33%;
 }
@@ -260,8 +436,8 @@ a:active {
     grid-gap: 20px;
     margin: 0;
   }
-  .grid__item {
-    background-color: lightgray;
+  .grid-item {
+    /* background-color: var(--another-white); */
     width: auto;
     min-height: auto;
     margin: 0;
@@ -282,7 +458,7 @@ a:active {
   .grid {
     grid-gap: 10px;
   }
-  .grid__item:last-child {
+  .grid-item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
@@ -356,6 +532,7 @@ a:active {
 
 .contact_infos-wrapper {
   display: grid;
+  padding-top: 24px;
   max-width: 700px;
   margin: 0 auto;
 }
