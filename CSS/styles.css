@@ -447,6 +447,7 @@ a:active {
   justify-content: space-between;
   border-style: dashed;
   border-color: var(--primary-color);
+  position: relative;
 }
 
 .grid-item__title {
@@ -461,6 +462,10 @@ a:active {
 
 .grid-item__link {
   text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 16px;
 }
 
 /* start grid fallback */
