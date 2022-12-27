@@ -34,7 +34,8 @@ module.exports.staticSiteMailer = (event, context, callback) => {
       statusCode: err ? 500 : 200,
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Access-Control-Allow-Origin":
+          "https://gabriela-portfolio-cf.netlify.app",
       },
       body: JSON.stringify({
         message: err ? err.message : data,
