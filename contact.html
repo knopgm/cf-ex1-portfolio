@@ -83,44 +83,44 @@
         </div>
 
         <div class="contact_infos-wrapper">
-          <div class="address">
+          <div class="contacts">
             Gabriela Knop Marques<br />
-            Sophie-Charlotten-Str. <br />
+            Charlottenburg<br />
             14059 Berlin<br />
             <br />
+            <!-- </div>
+          <div class="contacts"> -->
+            Tel: <a href="tel:+4917636595273">+49 176 36595273</a><br />
+            Skype:
+            <a href="https://join.skype.com/invite/A5aKp9WXSvNX"> My Skype</a
+            ><br />
+            Email: <a href="mailto:knop.gm@gmail.com">knop.gm@gmail.com</a>
           </div>
-          <div class="contacts">
-            Tel: <a href="tel:+491234567">+49 1234567</a><br />
-            Skype: <a href="skype:something"> My Skype</a><br />
-            <a href="mailto:knop.gm@gmail.com"
-              >knop (dot) gm (at) gmail (dot) com</a
-            >
-          </div>
-        </div>
+          <!-- </div> -->
 
-        <form
-          action="https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com"
-          method="post"
-          id="contact-form"
-        >
-          <div class="form_contact-wrapper">
-            <input
-              type="name"
-              name="name"
-              id="contact-name"
-              class="input-form"
-              placeholder="Name"
-              required
-            />
-            <input
-              type="email"
-              name="reply_to"
-              id="contact-email"
-              class="input-form"
-              placeholder="Email"
-              required
-            />
-            <!-- <input
+          <form
+            action="https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com"
+            method="post"
+            id="contact-form"
+          >
+            <div class="form_contact-wrapper">
+              <input
+                type="name"
+                name="name"
+                id="contact-name"
+                class="input-form"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="email"
+                name="reply_to"
+                id="contact-email"
+                class="input-form"
+                placeholder="Email"
+                required
+              />
+              <!-- <input
               type="tel"
               name="telephone"
               id="contact-telephone"
@@ -128,18 +128,19 @@
               placeholder="Telephone"
               pattern="\d{3}[\-]\d{3}[\-]\d{4}"
             /> -->
-          </div>
-          <div class="form_contact-wrapper">
-            <textarea
-              required
-              maxlength="240"
-              name="message"
-              id="contact-message"
-              placeholder="Message"
-            ></textarea>
-            <input type="submit" value="SUBMIT" class="submit_button" />
-          </div>
-        </form>
+              <!-- </div>
+          <div class="form_contact-wrapper"> -->
+              <textarea
+                required
+                maxlength="240"
+                name="message"
+                id="contact-message"
+                placeholder="Message"
+              ></textarea>
+              <input type="submit" value="SUBMIT" class="submit_button" />
+            </div>
+          </form>
+        </div>
         <p id="js-form-response"></p>
       </main>
 
