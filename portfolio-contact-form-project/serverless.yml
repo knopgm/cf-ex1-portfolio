@@ -1,0 +1,22 @@
+service: portfolio-contact-form-project
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-central-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "ses:SendEmail"
+      Resource: ["*"]
+  httpApi:
+    cors: true
+
+functions:
+  staticSiteMailer:
+    handler: handler.staticSiteMailer
+    events:
+      - httpApi:
+          path: /
+          method: post
