@@ -44,7 +44,7 @@ input {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-body);
   /* Sets the font size to 16px */
@@ -700,4 +700,8 @@ button:focus,
 }
 [type="submit"]:hover {
   background: var(--primary-color);
+}
+
+.find-me {
+  font-weight: 600;
 }
