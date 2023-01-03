@@ -1,0 +1,11 @@
+{
+  "name": "cf-portfolio",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --no-minify"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "posthtml-include": "^1.7.4"
+  }
+}

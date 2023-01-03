@@ -1,0 +1,80 @@
+<section id="contact" class="section_wrapper">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Gabriela</title>
+    <link href="img/favicon-16x16.png" rel="shortcut icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <div class="contact_infos-wrapper">
+    <div class="contacts">
+      Gabriela Knop Marques<br />
+      Charlottenburg<br />
+      14059 Berlin<br />
+      <br />
+      <!-- </div>
+    <div class="contacts"> -->
+      Tel: <a href="tel:+4917636595273">+49 176 36595273</a><br />
+      Skype:
+      <a href="https://join.skype.com/invite/A5aKp9WXSvNX"> My Skype</a><br />
+      Email: <a href="mailto:knop.gm@gmail.com">knop.gm@gmail.com</a>
+    </div>
+    <!-- </div> -->
+
+    <form
+      action="https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com"
+      method="post"
+      id="contact-form"
+    >
+      <div class="form_contact-wrapper">
+        <input
+          type="name"
+          name="name"
+          id="contact-name"
+          class="input-form"
+          placeholder="Name"
+          required
+        />
+        <input
+          type="email"
+          name="reply_to"
+          id="contact-email"
+          class="input-form"
+          placeholder="Email"
+          required
+        />
+        <!-- <input
+        type="tel"
+        name="telephone"
+        id="contact-telephone"
+        class="input-form"
+        placeholder="Telephone"
+        pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+      /> -->
+        <!-- </div>
+    <div class="form_contact-wrapper"> -->
+        <textarea
+          required
+          maxlength="240"
+          name="message"
+          id="contact-message"
+          placeholder="Message"
+        ></textarea>
+        <input type="submit" value="SUBMIT" class="submit_button" />
+      </div>
+    </form>
+  </div>
+  <p id="js-form-response"></p>
+  <script src="js/contact.js"></script>
+</section>
