@@ -1,24 +1,10 @@
-/* Profile Avatar */
-
-// .profile {
-//   max-width: 300px;
-//   /* max-height: 555px; */
-//   margin: 0 auto;
-//   /* padding: 20px; */
-//   display: grid;
-//   /* text-align: center; */
-//   /* grid-template-columns: 1fr; */
-
-//   align-items: center;
-// }
-
 // grid-area accepts four values separated by slashes:
 // grid-row-start, grid-column-start, grid-row-end, followed by
 // grid-column-end. ex: grid-area: 1/1/3/6;
 
 .profile {
   display: grid;
-  grid-auto-flow: row;
+  grid-template-columns: 1fr;
   align-items: center;
   padding: 0 1rem;
 }
@@ -33,6 +19,7 @@
   // background-color: aquamarine;
   width: 100%;
   height: 100%;
+  border-radius: 6px;
 }
 
 .profile_third {
@@ -40,6 +27,18 @@
   display: none;
   width: 100%;
   height: 100%;
+}
+
+.pagehome_infos {
+  text-align: center;
+}
+
+.github_link_check_text {
+  fill: var(--visited-link-color);
+}
+
+.github_link_check_text :hover {
+  fill: var(--interactive-hovered);
 }
 
 @media all and (min-width: 500px) {
@@ -51,20 +50,28 @@
   }
 
   .profile_first {
-    grid-area: 1 / 1 / 13 / 13;
+    grid-area: 1 / 1 / 11 / 15;
   }
 
   .profile_second {
-    grid-area: 5 / 9 / 19 / 25;
+    grid-area: 4 / 9 / 14 / 25;
     z-index: 3;
     padding: 1rem;
     background-color: var(--another-blue-jeans);
     box-shadow: 1px 1px 7px var(--grey-blueish);
   }
 
-  .profile_third {
-    grid-area: 16 / 5 / 23 / 11;
+  .tools-wrapper {
+    grid-area: 12 / 3 / 23 / 24;
     display: block;
+  }
+
+  .pagehome_infos {
+    text-align: unset;
+  }
+
+  .enter {
+    display: none;
   }
 }
 
@@ -79,57 +86,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
+  margin: 1rem 0;
   top: 0;
   left: 0;
+  border-radius: 25px;
   box-shadow: 1px 1px 7px var(--grey-blueish);
   /* border-radius: 40px; */
 }
-
-// .avatar_container :hover {
-//   opacity: 1;
-// }
-
-// @media all and (min-width: 820px) {
-//   .profile {
-//     max-width: 700px;
-//   }
-// }
-// @media all and (min-width: 500px) {
-//   .profile {
-//     // grid-template-columns: 1fr 2fr;
-//     text-align: left;
-//     max-width: 840px;
-//     max-height: 555px;
-//     grid-gap: 50px;
-//   }
-//   .avatar_container img {
-//     /* width: 100%;
-//       height: 100%;
-//       object-fit: cover; */
-//   }
-// }
-
-/* .profile__cropper {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%;
-    border-style: dashed;
-    border-color: var(--primary-color);
-    position: relative;
-    margin: 0 auto;
-  }
-  
-  .profile__cropper img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-  } */
-
-@media all and (min-width: 500px) {
-}
-/* Profile Avatar end */

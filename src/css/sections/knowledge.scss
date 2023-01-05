@@ -5,8 +5,8 @@
 }
 .tools-wrapper {
   margin: 20px;
-  background-color: var(--another-blue-jeans);
-  box-shadow: 10px 10px 15px 0px rgb(0 0 0 / 60%);
+  border: 1px solid var(--rosegolden);
+  border-radius: 20px;
   text-align: center;
 }
 
@@ -33,17 +33,18 @@
 
 .code_icons img {
   width: 25%;
+  box-shadow: 1px 1px 7px var(--grey-blueish);
+  background-color: var(--another-white);
 }
 
 .icon {
   display: flex;
   gap: 10px;
   align-items: center;
-  filter: grayscale(0.6);
 }
 
 .progressbar {
-  background-color: var(--white-ton);
+  background-color: var(--another-blue-jeans);
   border-radius: 13px;
   padding: 3px;
   width: 100px;
@@ -51,7 +52,7 @@
 }
 
 .progressbar > div {
-  background-color: var(--another-blue-jeans);
+  background-color: var(--interactive-hovered);
   width: 40%;
   /* Adjust with JavaScript */
   height: 10px;
