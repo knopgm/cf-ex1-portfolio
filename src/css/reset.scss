@@ -1,0 +1,24 @@
+* {
+  /*To include border and padding in the total width calculation of the elements*/
+  box-sizing: border-box;
+}
+
+h4 {
+  color: var(--primary-color);
+  margin-block-end: 0px;
+}
+
+textarea {
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+}
+
+input {
+  all: unset;
+}

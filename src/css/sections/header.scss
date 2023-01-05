@@ -1,0 +1,181 @@
+/* Hamburger menu */
+@media all and (max-width: 500px) {
+  #menuToggle {
+    display: block;
+    position: relative;
+    z-index: 4;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: var(--primary-color);
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--primary-color);
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Positioned at the top *******right of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 10rem;
+    margin: -100px 0 0 -106px;
+    padding: 20px;
+    padding-top: 125px;
+
+    background: linen;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(0, -100%);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+   * Slide it in from the top
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+/*End of hamburger menu*/
+
+/* navbar/page-header */
+.main-navigation {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.page-header {
+  /* background-color: lightgray; */
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  backdrop-filter: blur(5px);
+  z-index: 300;
+  overflow: hidden;
+  background-color: var(--another-blue-jeans);
+  opacity: 0.7;
+}
+
+.page-header__item {
+  height: 100%;
+  text-align: left;
+}
+
+.page-header__item image {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  text-align: right;
+}
+
+.navigation-list {
+  list-style: none;
+  padding: 0;
+}
+
+@media all and (min-width: 500px) {
+  .navigation-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  // .navigation-list__item--active {
+  //   padding: 6px 12px;
+  //   border-radius: 80px;
+  //   border: 2px solid var(--primary-color);
+  // }
+}
+/* navbar/page-header end */

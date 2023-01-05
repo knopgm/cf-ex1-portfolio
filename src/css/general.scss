@@ -1,0 +1,88 @@
+body {
+  /* background: linear-gradient(45deg, bisque, transparent); */
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-body);
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  background-color: var(--background-black);
+  color: #f4f8f8;
+  /* Sets the line-height to 1.6 */
+}
+
+/* h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Josefin Slab", "serif";
+  } */
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bigger);
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bigger);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bigger);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:visited {
+  /* visited link */
+  color: var(--visited-link-color);
+}
+
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: #ed8a63;
+}
+
+a:active {
+  /* selected link */
+  color: var(--active-link-color);
+}
+
+.page_content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+.section_wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+/* Reusable underline for Titles */
+.title-underline {
+  display: inline-block;
+  position: relative;
+}
+
+.title-underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 90%;
+  background: var(--gold);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+/* Reusable underline for Titles end */

@@ -15,14 +15,18 @@
       <span></span>
       <ul id="menu" role="menubar" class="navigation-list">
         <li role="menuitem">
-          <a
-            href="#welcome"
-            class="navigation-list__item navigation-list__item--active"
-            >About me</a
-          >
+          <a href="#welcome" class="navigation-list__item">About me</a>
         </li>
         <li role="menuitem">
-          <a href="#projects" class="navigation-list__item">Projects</a>
+          <a href="#knowledge" class="navigation-list__item">Tech</a>
+        </li>
+        <li role="menuitem">
+          <a
+            href="#projects"
+            onClick="toggleMenu()"
+            class="navigation-list__item"
+            >Projects</a
+          >
         </li>
         <li role="menuitem">
           <a href="#contact" class="navigation-list__item">Contact</a>
@@ -30,4 +34,5 @@
       </ul>
     </div>
   </nav>
+  <script src="js/header.js"></script>
 </header>

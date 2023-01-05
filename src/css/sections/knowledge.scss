@@ -1,0 +1,60 @@
+.svg-wrapper {
+  width: 90%;
+  align-self: center;
+  justify-self: center;
+}
+.tools-wrapper {
+  margin: 20px;
+  background-color: var(--another-blue-jeans);
+  box-shadow: 10px 10px 15px 0px rgb(0 0 0 / 60%);
+  text-align: center;
+}
+
+.techProgress_title {
+  margin-top: 2px;
+  color: var(--button-bg-color);
+}
+.code_icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* justify-content: center;
+    flex-wrap: wrap; */
+  gap: 20px;
+  max-width: 840px;
+  margin: 0 auto;
+  padding-bottom: 12px;
+}
+
+@media all and (min-width: 500px) {
+  .code_icons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.code_icons img {
+  width: 25%;
+}
+
+.icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  filter: grayscale(0.6);
+}
+
+.progressbar {
+  background-color: var(--white-ton);
+  border-radius: 13px;
+  padding: 3px;
+  width: 100px;
+  /* height: 10px; */
+}
+
+.progressbar > div {
+  background-color: var(--another-blue-jeans);
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 10px;
+  border-radius: 10px;
+}
+/* about me/welcome page end */

@@ -1,0 +1,20 @@
+/* Footer */
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.find-me {
+  font-weight: 600;
+}
+
+.social-media a {
+  fill: var(--another-white);
+}
+
+.social-media a:hover {
+  fill: var(--interactive-hovered);
+}
