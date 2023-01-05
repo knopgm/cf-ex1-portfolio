@@ -1,18 +1,19 @@
 <section id="contact" class="section_wrapper">
   <div class="contact_infos-wrapper">
     <div class="contacts">
-      Gabriela Knop Marques<br />
-      Charlottenburg<br />
-      14059 Berlin<br />
-      <br />
-      <!-- </div>
-    <div class="contacts"> -->
-      Tel: <a href="tel:+4917636595273">+49 176 36595273</a><br />
-      Skype:
-      <a href="https://join.skype.com/invite/A5aKp9WXSvNX"> My Skype</a><br />
-      Email: <a href="mailto:knop.gm@gmail.com">knop.gm@gmail.com</a>
+      <div class="contacts_address">
+        Gabriela Knop Marques<br />
+        Charlottenburg<br />
+        14059 Berlin<br />
+      </div>
+
+      <div class="contacts_phone_mail">
+        Tel: <a href="tel:+4917636595273">+49 176 36595273</a><br />
+        Skype:
+        <a href="https://join.skype.com/invite/A5aKp9WXSvNX"> My Skype</a><br />
+        Email: <a href="mailto:knop.gm@gmail.com">knop.gm@gmail.com</a>
+      </div>
     </div>
-    <!-- </div> -->
 
     <form
       action="https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com"
@@ -57,6 +58,27 @@
       </div>
     </form>
   </div>
+  <!-- Footer with links to social media profiles -->
+  <footer class="page-footer">
+    <p class="find-me">Find me on</p>
+    <div class="social-media">
+      <!-- Github logo -->
+      <a href="https://github.com/knopgm" target="_blank">
+        <include src="./src/img/github_icon.svg"></include>
+      </a>
+      <!-- Email logo -->
+      <a href="mailto:knop.gm@gmail.com" target="_blank">
+        <include src="./src/icons/mail.svg"></include>
+      </a>
+      <!-- LinkedIn logo -->
+      <a
+        href="https://www.linkedin.com/in/gabriela-knop-marques-b5075a53/"
+        target="_blank"
+      >
+        <include src="./src/img/linkedin_icon.svg"></include>
+      </a>
+    </div>
+  </footer>
   <p id="js-form-response"></p>
   <script src="js/contact.js"></script>
 </section>
