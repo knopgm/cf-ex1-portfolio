@@ -31,14 +31,34 @@
     <!-- Header including the logo and the main navigation -->
 
     <include src="./src/partials/header.html"></include>
-    <div class="page_content-wrapper">
-      <main class="main_container">
+
+    <main class="main_container">
+      <div class="effect_wrapper">
         <include src="./src/partials/welcome.html"></include>
+      </div>
+      <div class="page_content-wrapper">
         <include src="./src/partials/projects.html"></include>
         <include src="./src/partials/contact.html"></include>
-      </main>
-    </div>
-
-    <script src="js/tota11y.min.js"></script>
+      </div>
+    </main>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+  <script>
+    VANTA.DOTS({
+      el: ".effect_wrapper",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      showLines: false,
+      backgroundColor: "#191a1a",
+      color: "#ffae34",
+      color2: "#ffae34",
+    });
+  </script>
+  <script src="js/tota11y.min.js"></script>
 </html>
