@@ -1,3 +1,7 @@
+.profile_wrapper {
+  margin: 1rem;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -46,17 +50,26 @@
 }
 
 @media all and (min-width: 500px) {
+  .profile_wrapper {
+    margin: 3rem;
+  }
+
   .profile {
     flex-direction: row;
+    gap: 80px;
   }
   .aboutme_wrapper {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 60px;
+    max-width: 1805px;
   }
 
   .pagehome_infos {
     text-align: unset;
+  }
+  .check-github_text {
+    text-align: center;
   }
 
   .enter {
@@ -64,6 +77,6 @@
   }
 
   .avatar_container {
-    width: 70%;
+    width: 100%;
   }
 }

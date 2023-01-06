@@ -5,6 +5,7 @@
   flex-direction: column;
   text-align: center;
   margin-top: 10px;
+  gap: 2px;
 
   @media all and (min-width: 500px) {
     margin-top: 40px;
@@ -17,10 +18,21 @@
   color: var(--primary);
 }
 
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .social-media a {
   fill: var(--another-white);
 }
 
 .social-media a:hover {
-  fill: var(--interactive-hovered);
+  transform: translateY(-4px);
+
+  svg {
+    fill: var(--interactive-hovered);
+  }
 }

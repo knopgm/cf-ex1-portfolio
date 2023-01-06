@@ -1,7 +1,7 @@
 body {
   /* background: linear-gradient(45deg, bisque, transparent); */
   font-family: "Poppins", sans-serif;
-  font-weight: var(--font-weight-thin);
+  font-weight: var(--font-weight-thinner);
   font-size: var(--font-size-body);
   /* Sets the font size to 16px */
   line-height: 1.6;
@@ -32,7 +32,7 @@ a {
 
 a:visited {
   /* visited link */
-  // color: var(--primary);
+  color: var(--primary);
 }
 
 a:hover,

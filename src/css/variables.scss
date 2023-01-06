@@ -37,16 +37,15 @@
   --font-weight-bigger: 700;
 
   --font-size-body: 14px;
-  --font-size-h1: 40px;
+  --font-size-h1: 36px;
   --font-size-h2: 26px;
   --font-size-h3: 16px;
   --font-size-grid-h1: 36px;
 
   @media all and (min-width: 500px) {
-    --font-size-body: 20px;
-    --font-size-h1: 40px;
+    --font-size-body: 18px;
+    --font-size-h1: 50px;
     --font-size-h2: 28px;
-    --font-size-h3: 20px;
-    --font-size-grid-h1: 40px;
+    --font-size-h3: 22px;
   }
 }
