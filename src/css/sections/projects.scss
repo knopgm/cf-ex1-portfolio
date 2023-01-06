@@ -1,4 +1,9 @@
 /* Projects */
+#projects {
+  margin-top: -90px;
+  padding-top: 90px;
+}
+
 .work-container {
   margin: 0 20px;
   display: flex;
@@ -48,6 +53,10 @@
   border: 1px solid var(--primary);
   border-radius: 20px;
   position: relative;
+
+  &:hover {
+    border: 1px dashed var(--primary);
+  }
 }
 
 .grid-item__title {
