@@ -1,91 +1,86 @@
 <section id="contact" class="section_wrapper">
-  <div class="contact_title">
-    <h1>
-      Let's work
-      <div class="title-underline"><h1>together</h1></div>
-    </h1>
-    <p class="sendme_text">Just send me a message</p>
-  </div>
-  <div class="contact_infos-wrapper">
-    <div class="contacts">
-      <div class="contacts_address">
-        Gabriela Knop Marques<br />
-        Charlottenburg<br />
-        14059 Berlin<br />
-      </div>
-
-      <div class="contacts_phone_mail">
-        Tel: <a href="tel:+4917636595273">+49 176 36595273</a><br />
-        Skype:
-        <a href="https://join.skype.com/invite/A5aKp9WXSvNX"> My Skype</a><br />
-        Email: <a href="mailto:knop.gm@gmail.com">knop.gm@gmail.com</a>
-      </div>
+  <div class="contact_wrapper">
+    <div class="title_subtitle_center">
+      <h1>
+        Let's work
+        <span class="yellowing">together</span>
+      </h1>
+      <h3>Just send me a message...</h3>
     </div>
+    <div class="contact_infos-wrapper">
+      <div class="contacts">
+        <div class="contacts_address">
+          Gabriela Knop Marques<br />
+          Charlottenburg<br />
+          14059 Berlin<br />
+        </div>
 
-    <form
-      action="https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com"
-      method="post"
-      id="contact-form"
-    >
-      <div class="form_contact-wrapper">
-        <input
-          type="name"
-          name="name"
-          id="contact-name"
-          class="input-form"
-          placeholder="Name"
-          required
-        />
-        <input
-          type="email"
-          name="reply_to"
-          id="contact-email"
-          class="input-form"
-          placeholder="Email"
-          required
-        />
-        <!-- <input
-        type="tel"
-        name="telephone"
-        id="contact-telephone"
-        class="input-form"
-        placeholder="Telephone"
-        pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-      /> -->
-        <!-- </div>
-    <div class="form_contact-wrapper"> -->
-        <textarea
-          required
-          maxlength="240"
-          name="message"
-          id="contact-message"
-          placeholder="Message"
-        ></textarea>
-        <input type="submit" value="SUBMIT" class="submit_button" />
+        <div class="contacts_phone_mail">
+          <span class="yellowing">Tel:</span>
+          <a href="tel:+4917636595273">+49 176 36595273</a><br />
+          <span class="yellowing">Skype:</span>
+          <a href="https://join.skype.com/invite/A5aKp9WXSvNX"> My Skype</a
+          ><br />
+          <span class="yellowing">Email:</span>
+          <a href="mailto:knop.gm@gmail.com">knop.gm@gmail.com</a>
+        </div>
       </div>
-    </form>
-  </div>
-  <!-- Footer with links to social media profiles -->
-  <footer class="page-footer">
-    <p class="find-me">Find me on</p>
-    <div class="social-media">
-      <!-- Github logo -->
-      <a href="https://github.com/knopgm" target="_blank">
-        <include src="./src/img/github_icon.svg"></include>
-      </a>
-      <!-- Email logo -->
-      <a href="mailto:knop.gm@gmail.com" target="_blank">
-        <include src="./src/icons/mail.svg"></include>
-      </a>
-      <!-- LinkedIn logo -->
-      <a
-        href="https://www.linkedin.com/in/gabriela-knop-marques-b5075a53/"
-        target="_blank"
+
+      <form
+        action="https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com"
+        method="post"
+        id="contact-form"
       >
-        <include src="./src/img/linkedin_icon.svg"></include>
-      </a>
+        <div class="form_contact-wrapper">
+          <input
+            type="name"
+            name="name"
+            id="contact-name"
+            class="input-form"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            name="reply_to"
+            id="contact-email"
+            class="input-form"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            required
+            maxlength="240"
+            name="message"
+            id="contact-message"
+            placeholder="Message"
+          ></textarea>
+          <input type="submit" value="SUBMIT" class="submit_button" />
+        </div>
+      </form>
     </div>
-  </footer>
-  <p id="js-form-response"></p>
+    <!-- Footer with links to social media profiles -->
+    <footer class="page-footer">
+      <p class="find-me">Find me on</p>
+      <div class="social-media">
+        <!-- Github logo -->
+        <a href="https://github.com/knopgm" target="_blank">
+          <include src="./src/img/github_icon.svg"></include>
+        </a>
+        <!-- Email logo -->
+        <a href="mailto:knop.gm@gmail.com" target="_blank">
+          <include src="./src/icons/mail.svg"></include>
+        </a>
+        <!-- LinkedIn logo -->
+        <a
+          href="https://www.linkedin.com/in/gabriela-knop-marques-b5075a53/"
+          target="_blank"
+        >
+          <include src="./src/img/linkedin_icon.svg"></include>
+        </a>
+      </div>
+    </footer>
+    <p id="js-form-response"></p>
+  </div>
   <script src="js/contact.js"></script>
 </section>

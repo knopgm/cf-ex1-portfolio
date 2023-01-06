@@ -10,12 +10,12 @@
 
   #menuToggle a {
     text-decoration: none;
-    color: var(--background-black);
+    color: white;
     transition: color 0.3s ease;
   }
 
   #menuToggle a:hover {
-    color: var(--interactive-hovered);
+    color: var(--primary);
   }
 
   #menuToggle input {
@@ -44,7 +44,7 @@
     margin-bottom: 5px;
     position: relative;
 
-    background: var(--primary-color);
+    background: var(--primary);
     border-radius: 3px;
 
     z-index: 400;
@@ -70,7 +70,7 @@
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--primary-color);
+    background: var(--primary);
   }
 
   /*
@@ -98,7 +98,7 @@
     padding: 20px;
     padding-top: 125px;
 
-    background: var(--grey-blueish);
+    background: var(--background-black);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -139,12 +139,12 @@
   justify-content: space-between;
   height: 90px;
   width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
   position: fixed;
   backdrop-filter: blur(5px);
   z-index: 500;
 
-  background-color: var(--another-blue-jeans);
+  // background-color: var(--another-blue-jeans);
   opacity: 0.9;
 }
 

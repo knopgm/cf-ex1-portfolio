@@ -1,7 +1,7 @@
 body {
   /* background: linear-gradient(45deg, bisque, transparent); */
   font-family: "Poppins", sans-serif;
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-thin);
   font-size: var(--font-size-body);
   /* Sets the font size to 16px */
   line-height: 1.6;
@@ -10,17 +10,9 @@ body {
   /* Sets the line-height to 1.6 */
 }
 
-/* h1,
-  h2,
-  h3,
-  h4 {
-    font-family: "Josefin Slab", "serif";
-  } */
-
 h1 {
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bigger);
-  margin: 0;
 }
 
 h2 {
@@ -30,24 +22,24 @@ h2 {
 
 h3 {
   font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bigger);
+  font-weight: var(--font-weight-thinner);
 }
 
 a {
-  color: var(--primary-color);
+  color: white;
   text-decoration: none;
 }
 
 a:visited {
   /* visited link */
-  color: var(--visited-link-color);
+  // color: var(--primary);
 }
 
 a:hover,
 a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
-  color: #ed8a63;
+  color: var(--primary);
 }
 
 a:active {
@@ -70,32 +62,39 @@ a:active {
 }
 
 /* Reusable underline for Titles */
-.title-underline {
-  display: inline-block;
-  position: relative;
-  margin-top: 25px;
+.yellowing {
+  color: var(--primary);
 }
 
-.title-underline::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 90%;
-  background: var(--gold);
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
+.title_subtitle_center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
+
+// .title-underline {
+//   display: inline-block;
+//   position: relative;
+//   margin-top: 25px;
+// }
+
+// .title-underline::after {
+//   content: "";
+//   position: absolute;
+//   height: 2px;
+//   width: 90%;
+//   background: var(--gold);
+//   left: 50%;
+//   transform: translateX(-50%);
+//   border-radius: 5px;
+// }
 /* Reusable underline for Titles end */
 
 /* Fade in Effect */
 #welcome,
 #projects,
 #contact {
-  margin-top: 25px;
-  font-size: 21px;
-  // text-align: center;
-
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */

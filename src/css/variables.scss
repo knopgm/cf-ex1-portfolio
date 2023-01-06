@@ -2,25 +2,26 @@
   /*Colours list: */
   /* --primary-color: #357b70; */
   --secondary-color: #e0b354;
-  --background-bisque-color: #ffe4c4;
-  --background-peachpuff-color: #ffdab9;
   --white: #fff;
   --another-white: floralwhite;
-  --visited-link-color: #bd8c7d;
-  --active-link-color: #daaa7d;
+  --visited-link-color: #f6b24a;
+  --active-link-color: #f6b24a;
 
   --dark-grey: #2b2b2b;
   --sun-color-one: #edc655;
   --sun-color-two: #fcffad;
   --sun-color-three: #f76414;
-  --button-bg-color: #bd8c7d;
+  --button-bg-color: #ffae34;
 
   /* knopgm pallete */
-  --background-black: #09192f;
+  --background-black: #191a1a;
+  --primary: #ffae34;
   --white-ton: #f4f8f8;
-  --primary-color: #bd8c7d;
-  --secondary-color: #264477;
-  --interactive-hovered: #ed8a63;
+  // --primary-color: #bd8c7d;
+  // --secondary-color: #264477;
+  --interactive-hovered: #f76414;
+  --interactive-focus: #edc655;
+  --blue: #01bedd;
   --green: #41b3a3;
   --gold: #daaa7d;
   --grey-blueish: #9eb2c5;
@@ -28,14 +29,24 @@
   --another-blue-jeans: #3a4660;
 
   /*Fonts list: */
-  --font-weight-thin: 400;
-  --font-weight-normal: 500;
+  --font-weight-thinner: 200;
+  --font-weight-thin: 300;
+  --font-weight-normal: 400;
+  --font-weight-normal-big: 500;
   --font-weight-bold: 600;
   --font-weight-bigger: 700;
 
-  --font-size-body: 20px;
-  --font-size-h1: 34px;
-  --font-size-h2: 28px;
-  --font-size-h3: 20px;
-  --font-size-grid-h1: 22px;
+  --font-size-body: 14px;
+  --font-size-h1: 40px;
+  --font-size-h2: 26px;
+  --font-size-h3: 16px;
+  --font-size-grid-h1: 36px;
+
+  @media all and (min-width: 500px) {
+    --font-size-body: 20px;
+    --font-size-h1: 40px;
+    --font-size-h2: 28px;
+    --font-size-h3: 20px;
+    --font-size-grid-h1: 40px;
+  }
 }

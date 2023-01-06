@@ -45,13 +45,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid var(--rosegolden);
+  border: 1px solid var(--primary);
   border-radius: 20px;
   position: relative;
 }
 
 .grid-item__title {
-  color: var(--primary-color);
+  color: var(--primary);
   text-align: center;
 }
 

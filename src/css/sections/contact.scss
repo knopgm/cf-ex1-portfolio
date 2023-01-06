@@ -1,15 +1,13 @@
 /* Contact */
-.contact_title {
-  text-align: center;
+.contact_wrapper {
+  margin: 1rem;
 }
-.sendme_text {
-  line-height: 0.6;
-  font-weight: 100;
-}
+
 .contact_infos-wrapper {
   display: grid;
   margin: 0 auto;
   place-items: center;
+  margin-top: 20px;
 }
 
 .contacts {
@@ -20,12 +18,15 @@
 
 @media all and (min-width: 500px) {
   .contact_infos-wrapper {
-    gap: 95px;
+    // gap: 95px;
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
+    margin: 0 auto;
+    max-width: 700px;
   }
   .contacts {
     gap: 70px;
+    order: 2;
   }
 }
 
@@ -62,7 +63,7 @@ form {
   border-radius: 8px;
   line-height: 16px;
   background-color: transparent;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--primary);
   transition: all 0.3s;
   padding: 10px;
   margin-bottom: 10px;
@@ -72,7 +73,7 @@ form {
 }
 
 .input-form:focus {
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--interactive-focus);
 }
 
 textarea {
@@ -82,10 +83,13 @@ textarea {
 }
 
 #contact-message {
-  border: 2px solid var(--button-bg-color);
+  border: 2px solid var(--primary);
   border-radius: 5px;
-  font-size: 14px;
-  border-color: var(--button-bg-color);
+  border-color: var(--primary);
+}
+
+#contact-message:focus {
+  border: 2px solid var(--interactive-focus);
 }
 
 .button,
@@ -96,7 +100,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color: var(--button-bg-color);
+  background-color: var(--primary);
   color: var(--white);
   text-decoration: none;
   padding: 10px;
@@ -116,7 +120,7 @@ button:focus,
 }
 
 .button__secondary {
-  background-color: var(--secondary-color);
+  background-color: var(--primary);
   color: var(--dark-grey);
 }
 
@@ -127,7 +131,7 @@ button:focus,
 [type="submit"] {
   text-align: center;
   width: 89%;
-  background: var(--button-bg-color);
+  background: var(--primary);
   border-radius: 5px;
   border: 0;
   cursor: pointer;

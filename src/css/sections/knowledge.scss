@@ -4,15 +4,15 @@
   justify-self: center;
 }
 .tools-wrapper {
-  margin: 20px;
-  border: 1px solid var(--rosegolden);
+  margin: 100px 1rem;
+  border: 1px solid var(--primary);
   border-radius: 20px;
   text-align: center;
 }
 
 .techProgress_title {
   margin-top: 2px;
-  color: var(--button-bg-color);
+  color: var(--primary);
 }
 .code_icons {
   display: grid;
@@ -52,7 +52,7 @@
 }
 
 .progressbar > div {
-  background-color: var(--interactive-hovered);
+  background-color: var(--primary);
   width: 40%;
   /* Adjust with JavaScript */
   height: 10px;
