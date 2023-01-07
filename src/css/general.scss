@@ -26,7 +26,7 @@ h3 {
 }
 
 a {
-  color: white;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ a:hover,
 a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
-  color: var(--primary);
+  color: white;
 }
 
 a:active {

@@ -1,30 +1,25 @@
 <header class="page-header">
-  <div class="page-header__item">
-    <img src="img/gkmLogo2.png" alt="logo" class="page-header__item image" />
+  <div class="logo">
+    <include src="./src/img/drawing.svg"></include>
   </div>
-
   <nav class="main-navigation page-header__item">
     <div id="menuToggle">
-      <input type="checkbox" />
+      <input id="checkInput" type="checkbox" />
       <span></span>
       <span></span>
       <span></span>
       <ul id="menu" role="menubar" class="navigation-list">
-        <li role="menuitem">
-          <a href="#welcome" class="navigation-list__item">Home</a>
-        </li>
-        <li role="menuitem">
-          <a
-            href="#projects"
-            onClick="toggleMenu()"
-            class="navigation-list__item"
-            >Work</a
-          >
-        </li>
-        <li role="menuitem">
-          <a href="#contact" class="navigation-list__item">Contact</a>
-        </li>
+        <a href="#welcome" class="navigation-list__item"
+          ><li role="menuitem">Home</li></a
+        >
+        <a href="#projects" class="navigation-list__item"
+          ><li role="menuitem">Work</li></a
+        >
+        <a href="#contact" class="navigation-list__item"
+          ><li role="menuitem">Contact</li></a
+        >
       </ul>
     </div>
   </nav>
 </header>
+<script src="./js/burguer.js"></script>
