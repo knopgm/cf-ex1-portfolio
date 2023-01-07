@@ -10,11 +10,11 @@ Open the projects main folder in your terminal and run the command:
 
 - npm run start (for localhost at: "http://localhost:1234")
 
-Or use the public [https://myflix-gkm.netlify.app/](https://myflix-gkm.netlify.app/) address on your browser
+Or use the public [https://knopgm.com/](https://knopgm.com/) address on your browser
 
 ## Project dependencies
 
-To easy the comunication with who may be interest on my work, I create a short Javascript logic to send messages direct to my email box. To complete this logic, a Google cloud service was used.
+I used Javascript to better display the drop down menu on the hamburguer menu for mobile devices and, to easy the comunication with who may be interest on my work, I create a short Javascript logic for sending messages direct to my email box with the help of Google cloud service.
 
 - HTML
 - CSS

@@ -11,7 +11,9 @@ provider:
         - "ses:SendEmail"
       Resource: ["*"]
   httpApi:
-    cors: true
+    cors:
+      allowedOrigins:
+        - https://knopgm.com
 
 functions:
   staticSiteMailer:
