@@ -78,7 +78,6 @@ a:active {
   justify-content: center;
 }
 
-/* Reusable underline for Titles */
 .yellowing {
   color: var(--primary);
 }
@@ -89,24 +88,6 @@ a:active {
   flex-direction: column;
   text-align: center;
 }
-
-// .title-underline {
-//   display: inline-block;
-//   position: relative;
-//   margin-top: 25px;
-// }
-
-// .title-underline::after {
-//   content: "";
-//   position: absolute;
-//   height: 2px;
-//   width: 90%;
-//   background: var(--gold);
-//   left: 50%;
-//   transform: translateX(-50%);
-//   border-radius: 5px;
-// }
-/* Reusable underline for Titles end */
 
 /* Fade in Effect */
 #welcome,
@@ -166,4 +147,8 @@ a:active {
   to {
     opacity: 1;
   }
+}
+
+.vanta-canvas {
+  opacity: 0.3;
 }

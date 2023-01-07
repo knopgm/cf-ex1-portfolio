@@ -26,22 +26,9 @@
   z-index: 50;
   padding: 0 1rem;
 
-  @media all and (min-width: 500px) {
+  @media all and (min-width: 840px) {
     justify-content: center;
   }
-}
-
-.page-header__item {
-  // height: 100%;
-  // text-align: left;
-}
-
-.page-header__item image {
-  // flex: 0 1 200px;
-}
-
-.page-header__item:last-child {
-  // text-align: right;
 }
 
 .navigation-list {
@@ -49,20 +36,9 @@
   padding: 0;
 }
 
-@media all and (min-width: 500px) {
-  .page-header {
-    // justify-content: center;
-    // gap: 30px;
-  }
-
+@media all and (min-width: 840px) {
   .navigation-list {
     display: flex;
     gap: 30px;
   }
-
-  // .navigation-list__item--active {
-  //   padding: 6px 12px;
-  //   border-radius: 80px;
-  //   border: 2px solid var(--primary-color);
-  // }
 }

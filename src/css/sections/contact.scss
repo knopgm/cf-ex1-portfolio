@@ -53,8 +53,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 420px;
-  margin-top: 50px;
+  // max-width: 420px;
 }
 
 @media all and (min-width: 500px) {
@@ -67,10 +66,10 @@ form {
   border-radius: 8px;
   line-height: 16px;
   background-color: transparent;
+  color: var(--white);
   border: 2px solid var(--primary);
   transition: all 0.3s;
   padding: 10px;
-  margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
   outline: 0;
@@ -132,9 +131,9 @@ button:focus,
   padding-bottom: 20px;
 }
 
-[type="submit"] {
+.contact_wrapper input[type="submit"] {
   text-align: center;
-  width: 89%;
+  width: 100%;
   background: var(--primary);
   border-radius: 5px;
   border: 0;
@@ -146,6 +145,7 @@ button:focus,
   margin-top: 3px;
   font-weight: 700;
 }
-[type="submit"]:hover {
+
+.contact_wrapper input[type="submit"]:hover {
   background: var(--interactive-hovered);
 }

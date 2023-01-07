@@ -1,0 +1,41 @@
+/* Footer */
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+  gap: 2px;
+
+  @media all and (min-width: 500px) {
+    margin-top: 40px;
+  }
+}
+
+.find-me {
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--primary);
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-media a {
+  fill: var(--another-white);
+  svg {
+    width: 30px;
+  }
+}
+
+.social-media a:hover {
+  transform: translateY(-4px);
+
+  svg {
+    fill: var(--interactive-hovered);
+  }
+}
