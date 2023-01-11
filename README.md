@@ -4,6 +4,8 @@
 
 My portfolio was builded as a simple HTML and CSS static page, with the goal of a light, fast and responsive web site.
 
+![portfolio image](/src/img/project_photos/portfolio_screenshot.png)
+
 ## How to run the project
 
 Open the projects main folder in your terminal and run the command:
