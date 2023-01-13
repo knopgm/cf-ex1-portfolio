@@ -1,6 +1,5 @@
 .profile_wrapper {
-  margin: 1rem;
-  max-width: 1084px;
+  max-width: 1200px;
 }
 
 .profile {
@@ -52,10 +51,6 @@
 }
 
 @media all and (min-width: 781px) {
-  .profile_wrapper {
-    margin: 3rem;
-  }
-
   .profile {
     gap: 80px;
     display: grid;

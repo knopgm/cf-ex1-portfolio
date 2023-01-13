@@ -60,6 +60,7 @@ a:active {
   align-items: center;
   flex-direction: column;
   position: relative;
+  padding: 0 2rem;
 
   &:first-of-type {
     padding-top: 5rem;
@@ -76,6 +77,13 @@ a:active {
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
+  padding: 0 2rem;
+}
+
+@media only screen and (min-width: 1232px) {
+  .section_wrapper {
+    padding: 0;
+  }
 }
 
 .yellowing {
