@@ -17,8 +17,10 @@
 }
 
 .aboutme_wrapper {
-  display: flex;
+  text-align: justify;
   flex-direction: column;
+  display: flex;
+  padding: 0px 12px;
 }
 
 .avatar_wrapper {
@@ -60,6 +62,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
+    padding: unset;
   }
 
   .pagehome_infos {
