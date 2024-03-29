@@ -168,7 +168,7 @@
 }
 @media all and (max-width: 750px) {
   .grid {
-    grid-gap: 10px;
+    grid-gap: 20px;
   }
   .grid-item:last-child {
     grid-column: auto / auto;
