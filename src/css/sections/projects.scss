@@ -97,6 +97,21 @@
 
 .project_techlist {
   margin: 0;
+  display: flex;
+  gap: 6px;
+  flex-flow: row wrap;
+  padding: 10px 0;
+}
+
+.project_techlist-item {
+  border-right: 1px solid lightgray;
+  height: 100%;
+  padding: 0 10px;
+  color: var(--primary);
+
+  &:last-child {
+    border: unset;
+  }
 }
 
 @supports (display: grid) {
