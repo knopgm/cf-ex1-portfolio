@@ -84,6 +84,8 @@ textarea {
   border: 2px solid var(--primary);
   border-radius: 5px;
   border-color: var(--primary);
+  background-color: transparent;
+  padding: 10px;
 }
 
 #contact-message:focus {
@@ -126,7 +128,7 @@ button:focus,
   padding-bottom: 20px;
 }
 
-.contact_wrapper input[type="submit"] {
+.contact_wrapper input[type='submit'] {
   text-align: center;
   width: 100%;
   background: var(--primary);
@@ -141,6 +143,6 @@ button:focus,
   font-weight: 700;
 }
 
-.contact_wrapper input[type="submit"]:hover {
+.contact_wrapper input[type='submit']:hover {
   background: var(--interactive-hovered);
 }
