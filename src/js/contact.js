@@ -5,18 +5,17 @@
   form.onsubmit = (e) => {
     e.preventDefault();
 
-    if (e.body._gotcha) {
-      // It's a bot; reject the submission
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ message: 'Spam detected' }),
-      };
-    }
-
     // Prepare data to send
     const data = {};
     const formElements = Array.from(form);
     formElements.map((input) => (data[input.name] = input.value));
+
+    // Check for honeypot value (_gotcha field)
+    if (data._gotcha) {
+      // It's a bot; reject the submission
+      console.log('Spam detected, form not submitted');
+      return; // Prevent further form submission
+    }
 
     // Log what our lambda function will receive
     console.log(JSON.stringify(data));
