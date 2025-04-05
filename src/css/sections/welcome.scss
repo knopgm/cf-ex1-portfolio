@@ -59,9 +59,8 @@
     grid-template-columns: 2fr 1fr;
   }
   .aboutme_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    display: flex;
+    gap: 30px;
     padding: unset;
   }
 
