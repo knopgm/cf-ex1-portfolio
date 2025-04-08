@@ -130,4 +130,21 @@
     text-align: left;
     margin: 0;
   }
+  .case-study__conclusion_image-wrapper {
+    display: flex;
+    padding: 40px 0px 0px;
+    gap: 20px;
+    width: 350px;
+
+    .case-study__image {
+      aspect-ratio: 1/0.6;
+    }
+  }
+  .credits_link {
+    color: white;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
 }

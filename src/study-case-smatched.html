@@ -102,7 +102,7 @@
             <div class="case-study__image-wrapper">
               <img
                 class="case-study__image"
-                src="img/project_photos/BlogMe.png"
+                src="img/studyCase_images/smatched/smatched_img.png"
                 alt="image_project"
               />
             </div>
@@ -117,13 +117,14 @@
                 Since the developers team was composed by interns, the manager
                 initially opted for a static-site approach with the unanime
                 choice of language framework to be
-                <a href="https://react.dev/" target="_blank"> React</a>. The
-                decision of the language was lovely, but it sound confusing for
-                me and some coaleagues as React main creation reason is the r
-                eusability of Components. The explanation was the priority of
-                having a page to present for potential clients and investors.
-                After that, he assigned each intern to one specific page with
-                the goal to move the project faster.
+                <a href="https://react.dev/" target="_blank"> React</a>(a modern
+                Javascript library). The decision of the language was lovely,
+                but it sound confusing for some coaleagues and me knowing that
+                React main creation reason was with the purpose of reusability
+                of Components. The explanation was the priority of having a page
+                to present for potential clients and investors. After that, he
+                assigned each intern to one specific page with the goal to move
+                the project faster.
               </p>
               <p>
                 Since the Blog page was assigned for me, I saw very earlier the
@@ -140,47 +141,97 @@
             <div class="case-study__image-wrapper">
               <img
                 class="case-study__image"
-                src="img/project_photos/doc_myflix_screenshot.png"
+                src="img/project_photos/BlogMe.png"
                 alt="image_project"
               /><br />
-              <img
+              <!-- <img
                 class="case-study__image"
-                src="img/studyCase_images/Hashing_Password_test.png"
+                src="img/studyCase_images/myflix/Hashing_Password_test.png"
                 alt="image_project"
-              />
+              /> -->
             </div>
           </div>
           <!--Approach end-->
-          <!--Application Archhihtecture-->
+          <!--Application Architecture-->
           <div class="case-study__list-item">
             <div class="case-study__text-wrapper">
-              <h2></h2>
+              <h2>Page Functionality & Architecture</h2>
+              <h3>All Articles Page</h3>
               <p>
-                Changing gears to the user’s point of view, the web page was
-                developed with
-                <a href="https://reactjs.org/" target="_blank">React</a> (a
-                modern Javascript library) and
-                <a href="https://react-redux.js.org/" target="_blank"
-                  >React-Redux</a
-                >
-                (a state manager to guarantee consistent behaviour across server
-                and client logic). Bootstrap (a Javascript styling library) was
-                also used with some of its pre-built components.
+                The blog homepage was designed to display all articles in a card
+                layout. I created a BlogCard component that accepted props for
+                the image, title, snippet, and metadata. Each card was reusable
+                and allowed the page to dynamically render content from the
+                article data array using
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+                  target="_blank"
+                  >.map()</a
+                >.
               </p>
               <p>
-                After a short register or login, users can navigate between the
-                main view, where a movie list and a search tool is provided to
-                quickly find specific movies; a movie details view that shows
-                more information about the movie like synopis, genre and
-                director; a separate genre and director views; and the user's
-                own profile, where they can edit their own data or look/remove
-                movies from their favourite list.
+                To improve usability, especially as the number of articles grew,
+                I implemented Pagination Component. This involved slicing the
+                array of articles based on the current page and the number of
+                items per page, then updating the state when the user navigated
+                between pages. This was a practical introduction to stateful UI
+                logic and performance-aware rendering.
               </p>
             </div>
             <div class="case-study__image-wrapper">
               <img
                 class="case-study__image"
-                src="img/studyCase_images/myflix/myFlix_react_profile.png"
+                src="img/studyCase_images/smatched/pagination_component.png"
+                alt="image_project"
+              />
+            </div>
+          </div>
+          <div class="case-study__list-item">
+            <div class="case-study__text-wrapper">
+              <h3>Individual Article Page</h3>
+              <p>
+                Routing users to individual articles posed a new challenge.
+                Instead of hardcoding routes for each blog post, I chose to use
+                a query parameter-based routing system. For example, navigating
+                to "/article?name=exploringofferwall" would dynamically load the
+                blog post that matched the name parameter.
+              </p>
+              <p>
+                Inside the Article component, I used
+                <a
+                  href="https://reactrouter.com/api/hooks/useLocation#uselocation"
+                  target="_blank"
+                  >React Router’s useLocation()
+                </a>
+                hook to read the query string and parsed it with
+                URLSearchParams. This allowed me to extract the article name and
+                match it to the correct article object in the content data
+                structure.
+              </p>
+              <p>
+                Rendering the content required a flexible system, since each
+                article could contain a unique mix of content types. I solved
+                this by, inside of the Article component, add a
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch"
+                  target="_blank"
+                  >Switch block’s type
+                </a>
+                that will rendered the appropriate layout—whether it was a text
+                paragraph, a list, an image, or a quote. This helped me learn
+                how to build scalable UI systems that adapt to data rather than
+                rely on rigid layout code.
+              </p>
+            </div>
+            <div class="case-study__image-wrapper">
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/article_page.png"
+                alt="image_project"
+              />
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/switch.png"
                 alt="image_project"
               />
             </div>
@@ -189,27 +240,62 @@
           <!--Challange start-->
           <div class="case-study__list-challenge">
             <div class="case-study__text-wrapper">
-              <h2>Challenge</h2>
+              <h2>Key Learnings and Challenges</h2>
               <p>
-                Working with react is my goal, so I was excited to build this
-                app from the beginning. The struggles were most related to the
-                backend since it has a new way to work and debug, but I coop
-                with that with the same natural procedure steps: google search
-                for documentation for new frameworks and libraries, google
-                search for specific issues, console logging when it was
-                possible, including debugging function, and asking for help when
-                none of the firsts could solve my problem.
+                One of the most challenging aspects of this project was
+                implementing dynamic routing and understanding how client-side
+                navigation works in React. I had to dive deep into how the
+                browser handles URLs and how React Router translates those into
+                renderable views. During this process, I reached out to more
+                experienced developers who explained how routing trees and query
+                strings could work together, which helped me better structure my
+                solution.
               </p>
               <p>
-                The next steps for this app will be a better styling tool or
-                intensive Bootstrap learning, to improve visual aspects and a
-                more friendly user experience, although all the chosen tools
-                were a great selection from the course.
+                Another key learning moment came when the CTO of the project
+                raised concerns about performance. I hadn’t initially considered
+                things like lazy loading, content shift, or font preloading.
+                After researching and studying Google’s Core Web Vitals, I made
+                several improvements: optimizing image sizes, lazy-loading hero
+                sections, restructuring HTML for better content flow, and
+                reducing unused CSS. This not only improved my technical
+                understanding of front-end performance but also helped me see
+                how critical performance is to user experience and SEO.
               </p>
-              <p>
-                Another important lesson is to save more time to reach the
-                expectations of the schedule.
-              </p>
+            </div>
+            <div class="case-study__conclusion_image-wrapper">
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/contribution_smatched.png"
+                alt="image_project"
+              />
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/app_routes.png"
+                alt="image_project"
+              />
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/object_article.png"
+                alt="image_project"
+              />
+            </div>
+            <div class="case-study__conclusion_image-wrapper">
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/articleData.png"
+                alt="image_project"
+              />
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/query_params.png"
+                alt="image_project"
+              />
+              <img
+                class="case-study__image"
+                src="img/studyCase_images/smatched/commit-logs.png"
+                alt="image_project"
+              />
             </div>
           </div>
           <!--Challenge end-->
@@ -218,9 +304,35 @@
           <h2>Credits</h2>
           <div class="case-study__credits">
             <ul role="list">
-              <li><span class="yellowing">Role:</span> Lead Developer</li>
-              <li><span class="yellowing">Tutor:</span> Adam Pagels</li>
-              <li><span class="yellowing">Mentor:</span> Akunna Nwosu</li>
+              <li>
+                <span class="yellowing">My Role: </span>Intern Frontend
+                Developer
+              </li>
+              <li>
+                <span class="yellowing">CTO: </span
+                ><a
+                  class="credits_link"
+                  href="https://www.linkedin.com/in/davi-bentim/"
+                  target="_blank"
+                  >Davi Bentim</a
+                >
+              </li>
+              <li>
+                <span class="yellowing">Coaleagues: </span>
+                <a
+                  class="credits_link"
+                  href="https://www.linkedin.com/in/francieli-sauthier-fullstack/"
+                  target="_blank"
+                  >Francielle Sauthier</a
+                >
+                &
+                <a
+                  class="credits_link"
+                  href="https://www.linkedin.com/in/youcef-belallou-650567139/"
+                  target="_blank"
+                  >Youcef Belallou</a
+                >
+              </li>
             </ul>
           </div>
         </div>
