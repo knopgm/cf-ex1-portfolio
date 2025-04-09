@@ -22,12 +22,26 @@
   display: flex;
   gap: 20px;
 }
+
+.case-study__image {
+  transition: transform 0.3s;
+}
+.case-study__image:hover {
+  transform: scale(1.2);
+  border-style: dashed;
+  z-index: 3;
+}
+.case-study__highlighted_image {
+  transition: transform 0.3s;
+}
+.case-study__highlighted_image:hover {
+  transform: scale(1.5);
+  border-style: dashed;
+  z-index: 3;
+}
 .case-study__list-item:hover {
   h2 {
     color: var(--primary);
-  }
-  .case-study__image {
-    border-style: dashed;
   }
 }
 .case-study__list-challenge:hover {
@@ -41,18 +55,19 @@
   }
 }
 .case-study__conclusion_image-wrapper {
-  .case-study__image:hover {
+  .case-study__highlighted_image:hover {
     border-style: dashed;
   }
 }
 
 .case-study__text-wrapper {
   text-align: justify;
-  gap: 20px;
+  gap: 22px;
   display: grid;
 }
 
-.case-study__image {
+.case-study__image,
+.case-study__highlighted_image {
   border-radius: 20px;
   border: 1px solid var(--primary);
   padding: 4px;
@@ -142,7 +157,7 @@
     width: 100%;
     flex-wrap: wrap;
 
-    .case-study__image {
+    .case-study__highlighted_image {
       aspect-ratio: 1/0.6;
       width: 350px;
     }
