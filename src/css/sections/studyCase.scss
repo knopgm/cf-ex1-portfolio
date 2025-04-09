@@ -40,6 +40,11 @@
     color: var(--primary);
   }
 }
+.case-study__conclusion_image-wrapper {
+  .case-study__image:hover {
+    border-style: dashed;
+  }
+}
 
 .case-study__text-wrapper {
   text-align: justify;
@@ -133,11 +138,16 @@
   .case-study__conclusion_image-wrapper {
     display: flex;
     padding: 40px 0px 0px;
-    gap: 20px;
-    width: 350px;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
 
     .case-study__image {
       aspect-ratio: 1/0.6;
+      width: 350px;
+    }
+    @media all and (max-width: 500px) {
+      flex-wrap: wrap;
     }
   }
   .credits_link {
