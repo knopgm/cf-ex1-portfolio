@@ -54,7 +54,7 @@
     const xhr = new XMLHttpRequest();
     xhr.open(
       'POST',
-      'https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com/dev/',
+      'https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com',
       true
     );
     //xhr.open(form.method, form.action, true);
