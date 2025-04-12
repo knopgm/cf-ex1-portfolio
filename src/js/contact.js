@@ -5,6 +5,11 @@
   form.onsubmit = (e) => {
     e.preventDefault();
 
+    // Unable submit button
+    const submitBtn = document.querySelector('#js-submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Sending...';
+
     // Prepare data to send
     const data = {};
     const formElements = Array.from(form);
@@ -47,7 +52,12 @@
 
     // Construct an HTTP request
     const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action, true);
+    xhr.open(
+      'POST',
+      'https://gmpqga31t7.execute-api.eu-central-1.amazonaws.com/...',
+      true
+    );
+    //xhr.open(form.method, form.action, true);
     xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
@@ -56,6 +66,10 @@
 
     // Callback function
     xhr.onloadend = (response) => {
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.innerText = 'SUBMIT';
+
       if (response.target.status === 200) {
         // The form submission was successful
         form.reset();
@@ -63,8 +77,16 @@
           'Thanks for the message. I’ll be in touch shortly.';
       } else {
         // The form submission failed
-        formResponse.innerHTML = 'Something went wrong';
-        console.error(JSON.parse(response.target.response).message);
+        try {
+          const resJson = JSON.parse(response.target.response);
+          console.error('Form submit failed:', resJson);
+          formResponse.innerHTML = `Error: ${
+            resJson.message || 'Something went wrong'
+          }`;
+        } catch (err) {
+          console.error('Error parsing response', err);
+          formResponse.innerHTML = 'Unexpected error. Please try again later.';
+        }
       }
     };
   };
