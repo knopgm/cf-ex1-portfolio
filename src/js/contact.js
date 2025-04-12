@@ -77,15 +77,15 @@
           'Thanks for the message. I’ll be in touch shortly.';
       } else {
         // The form submission failed
+        formResponse.innerHTML = 'Something went wrong';
         try {
           const resJson = JSON.parse(response.target.response);
-          console.error('Form submit failed:', resJson);
-          formResponse.innerHTML = `Error: ${
-            resJson.message || 'Something went wrong'
-          }`;
+          console.error(resJson.message || 'Unexpected error');
         } catch (err) {
-          console.error('Error parsing response', err);
-          formResponse.innerHTML = 'Unexpected error. Please try again later.';
+          console.error(
+            'Could not parse JSON response:',
+            response.target.response
+          );
         }
       }
     };
